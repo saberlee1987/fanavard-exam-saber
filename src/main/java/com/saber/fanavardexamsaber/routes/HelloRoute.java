@@ -31,6 +31,9 @@ public class HelloRoute extends AbstractRestRouteBuilder {
                 .route()
                 .routeId(Routes.SAY_HELLO_ROUTE)
                 .routeGroup(Routes.SAY_HELLO_ROUTE_GROUP)
+                .to(String.format("direct:%s", Routes.SAY_HELLO_ROUTE));
+
+        from(String.format("direct:%s", Routes.SAY_HELLO_ROUTE))
                 .threads().threadName(Routes.SAY_HELLO_ROUTE)
                 .maxPoolSize(maxPoolSize)
                 .poolSize(minPoolSize)
