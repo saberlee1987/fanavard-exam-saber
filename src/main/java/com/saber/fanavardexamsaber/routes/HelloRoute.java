@@ -1,6 +1,6 @@
 package com.saber.fanavardexamsaber.routes;
 
-import com.saber.fanavardexamsaber.dto.HelloDto;
+import com.saber.fanavardexamsaber.dto.response.HelloDto;
 import org.apache.camel.Exchange;
 import org.apache.camel.model.rest.RestParamType;
 import org.springframework.beans.factory.annotation.Value;

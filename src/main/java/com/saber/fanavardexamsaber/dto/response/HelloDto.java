@@ -1,4 +1,4 @@
-package com.saber.fanavardexamsaber.dto;
+package com.saber.fanavardexamsaber.dto.response;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
 package com.saber.fanavardexamsaber;
 
-import com.saber.fanavardexamsaber.dto.HelloDto;
+import com.saber.fanavardexamsaber.dto.response.HelloDto;
 import com.saber.fanavardexamsaber.routes.Headers;
 import com.saber.fanavardexamsaber.routes.Routes;
 import org.apache.camel.Exchange;

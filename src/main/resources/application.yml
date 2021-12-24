@@ -26,6 +26,8 @@ service:
     hostName: localhost
   log:
     pretty-print: "true"
+  question-two:
+    rate: 10
   max-pool-size: 70
   min-pool-size: 30
 
