@@ -1,5 +1,6 @@
 package com.saber.fanavardexamsaber;
 
+import com.saber.fanavardexamsaber.dto.response.BitCointData;
 import com.saber.fanavardexamsaber.dto.response.HelloDto;
 import com.saber.fanavardexamsaber.routes.Headers;
 import com.saber.fanavardexamsaber.routes.Routes;
@@ -24,6 +25,16 @@ class FanavardExamSaberApplicationTests {
         });
         Integer statusCode = responseExchange.getIn().getHeader(Exchange.HTTP_RESPONSE_CODE, Integer.class);
         HelloDto body = responseExchange.getIn().getBody(HelloDto.class);
+        Assertions.assertEquals(statusCode, HttpStatus.OK.value());
+        Assertions.assertNotNull(body);
+    }
+    @Test
+    public void bitcointData(){
+        Exchange responseExchange =  producerTemplate.send(String.format("direct:%s",Routes.CALL_QUESTION_THREE_ROUTE),exchange -> {
+
+        });
+        Integer statusCode = responseExchange.getIn().getHeader(Exchange.HTTP_RESPONSE_CODE, Integer.class);
+        BitCointData body = responseExchange.getIn().getBody(BitCointData.class);
         Assertions.assertEquals(statusCode, HttpStatus.OK.value());
         Assertions.assertNotNull(body);
     }

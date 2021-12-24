@@ -28,6 +28,8 @@ service:
     pretty-print: "true"
   question-two:
     rate: 10
+  question-three:
+    url: https://api.nobitex.ir/market/udf/history
   max-pool-size: 70
   min-pool-size: 30
 

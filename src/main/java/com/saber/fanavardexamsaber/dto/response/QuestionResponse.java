@@ -4,6 +4,6 @@ import lombok.Data;
 
 import java.util.List;
 @Data
-public class QuestionTwoResponse {
-    private List<QuestionTwoResponseDto> response;
+public class QuestionResponse {
+    private List<QuestionResponseDto> response;
 }

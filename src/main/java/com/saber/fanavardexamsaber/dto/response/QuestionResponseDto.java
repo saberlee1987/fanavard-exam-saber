@@ -5,14 +5,14 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class QuestionTwoResponseDto implements Serializable, Cloneable {
+public class QuestionResponseDto implements Serializable, Cloneable {
     public String identifier;
     private Double award;
 
     @Override
-    public QuestionTwoResponseDto clone() {
+    public QuestionResponseDto clone() {
         try {
-            return (QuestionTwoResponseDto) super.clone();
+            return (QuestionResponseDto) super.clone();
         } catch (Exception ex) {
             return null;
         }
