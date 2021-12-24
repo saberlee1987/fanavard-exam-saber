@@ -1,0 +1,63 @@
+server:
+  port: 9005
+  servlet:
+    encoding:
+      force: true
+      charset: UTF-8
+  max-http-header-size: 756000
+  tomcat:
+    threads:
+      max: 4000
+      min-spare: 500
+    accept-count: 500
+    accesslog:
+      enabled: true
+      encoding: UTF-8
+
+spring:
+  application:
+    name: fanavard-exam-saber
+
+
+service:
+  api:
+    base-path: /services/fanavard-exam-saber
+    swagger-path: /v2/api-docs
+    hostName: localhost
+  log:
+    pretty-print: "true"
+  max-pool-size: 70
+  min-pool-size: 30
+
+camel:
+  springboot:
+    route-controller-thread-pool-size: 25000
+    producer-template-cache-size: 10000
+    consumer-template-cache-size: 10000
+    jmx-management-statistics-level: extended
+    main-run-controller: true
+  servlet:
+    mapping:
+      context-path: ${service.api.base-path}/*
+  component:
+    http:
+      connections-per-route: 3000
+      max-total-connections: 25000
+      connection-time-to-live: 35000
+      socket-timeout: 35000
+      connection-request-timeout: 35000
+      connect-timeout: 35000
+  dataformat:
+    json-jackson:
+      auto-discover-object-mapper: true
+management:
+  endpoints:
+    web:
+      base-path: /actuators/fanavard
+      exposure:
+        include: '*'
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true
+
